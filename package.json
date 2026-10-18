@@ -8,7 +8,7 @@
     "node": ">=20"
   },
   "bin": {
-    "deepseek-web": "./dist/index.js"
+    "deepseek-web": "dist/index.js"
   },
   "files": [
     "dist/",
