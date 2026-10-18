@@ -16,6 +16,7 @@ export interface SearchResult {
   authority?: unknown;
   date?: unknown;
   snippet?: unknown;
+  content?: unknown;
 }
 
 export interface SearchResponse {

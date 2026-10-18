@@ -1,6 +1,6 @@
 {
   "name": "deepseek-web",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A stdio MCP server for DeepSeek Search and Fetch APIs",
   "license": "MIT",
   "type": "module",

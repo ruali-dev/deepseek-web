@@ -37,6 +37,9 @@ function formatSearchResults(results: SearchResult[]): string {
     if (result.snippet !== undefined && result.snippet !== null && result.snippet !== "") {
       lines.push(`Snippet: ${displayValue(result.snippet)}`);
     }
+    if (result.content !== undefined && result.content !== null && result.content !== "") {
+      lines.push(`Content: ${displayValue(result.content)}`);
+    }
     return lines.join("\n");
   }).join("\n\n---\n\n");
 }
@@ -47,7 +50,7 @@ async function main(): Promise<void> {
     throw new Error("DEEPSEEK_API_KEY is required. Set it in the MCP server environment.");
   }
   const api = new DeepSeekApi(apiKey, process.env.DEEPSEEK_BASE_URL);
-  const server = new McpServer({ name: "deepseek-web", version: "1.0.0" });
+  const server = new McpServer({ name: "deepseek-web", version: "0.1.0" });
 
   server.registerTool(
     "search",
